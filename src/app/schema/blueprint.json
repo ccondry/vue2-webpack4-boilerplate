@@ -1,0 +1,76 @@
+
+{
+  "instanceTitle": "",
+  "instanceId": "",
+  "tags": [],
+  "instanceDescription": "",
+  "display": [
+    {
+      "sectionId": "overview",
+      "bannerType": "",
+      "bannerUrl": "",
+      "sectionVideo": "",
+      "sectionMainText": "",
+      "sectionVideoDescription": ""
+    },
+    {
+      "sectionId": "documentation",
+      "bannerType": "",
+      "bannerUrl": "",
+      "subsections": [
+        {
+          "sectionId": "Setup and Schedule",
+          "listOfDocs": []
+        },
+        {
+          "sectionId": "Prepare and Deliver",
+          "listOfDocs": []
+        },
+        {
+          "sectionId": "Demo Downloads and Links",
+          "listOfDocs": []
+        }
+      ]
+    },
+    {
+      "sectionId": "collateral",
+      "subsections": [
+        {
+          "sectionId": "Solution Overview",
+          "listOfDocs": [
+            {
+              "link": "",
+              "docDescription": "",
+              "file": "",
+              "desription": ""
+            }
+          ]
+        },
+        {
+          "sectionId": "User Guides",
+          "listOfDocs": [
+            {
+              "video": "",
+              "docDescription": "",
+              "file": "",
+              "link": "",
+              "desription": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "instanceConsumer": "",
+  "requirements": [],
+  "customInstanceState": "processing",
+  "instanceCustomerId": "",
+  "sfID": "",
+  "Theatre": "",
+  "audience": "",
+  "tasks": [],
+  "infrastructureBlueprint": "False",
+  "output": [],
+  "deleted": "False",
+  "logoImage": ""
+}

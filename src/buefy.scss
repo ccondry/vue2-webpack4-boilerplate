@@ -1,0 +1,156 @@
+// Import Bulma and Buefy styles
+// @import "~bulma/sass/utilities/_all";
+// @import "~bulma/sass/utilities/_all";
+
+// import bulma color variables
+@import "~bulma/sass/utilities/initial-variables";
+// @import "~bulma/sass/utilities/derived-variables";
+// @import "~bulma/sass/utilities/mixins";
+// Import Bulma's utilities
+@import "~bulma/sass/utilities/functions";
+
+// Import momentum-ui variables
+@import '~@momentum-ui/core/scss/colors/settings-base';
+// import our variables
+@import "./variables.scss";
+
+// $primary: findColorInvert($primary);
+// $primary-invert: findColorInvert($primary);
+// $twitter: #4099FF;
+// $twitter-invert: findColorInvert($twitter);
+
+$info: $md-purple-50;
+$family-primary: "CiscoSansTT Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$danger: $md-red-50;
+// $danger-invert: findColorInvert($danger);
+$success: $md-green-50;
+// $success-invert: findColorInvert($success);
+$primary: $md-blue-50;
+// $info-invert: findColorInvert($info);
+
+// make bulma links and buttons darker when hovered
+// $link-hover: hsl(0, 0%, 99%);
+// $button-hover-color: hsl(0, 0%, 99%);
+// $button-hover-border-color: hsl(0, 0%, 0%);
+// $button-text-hover-background-color: black;
+
+// white text on buttons
+// $button-color: white;
+// $button-hover-color: white;
+
+// darken the buttons more on hover and click
+// this matches the momentum-ui code pretty closely
+$button-darken-full: 17%;
+$button-darken-half: 9%;
+
+// $background: white;
+
+// lighten up the modal/dialog background color
+$modal-background-background-color: rgba(0, 0, 0, 0.45);
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+// $colors: (
+//   "white": ($white, $black),
+//   "black": ($black, $white),
+//   "light": ($light, $light-invert),
+//   "dark": ($dark, $dark-invert),
+//   "primary": ($primary, $primary-invert),
+//   "info": ($info, $info-invert),
+//   "success": ($success, $success-invert),
+//   "warning": ($warning, $warning-invert),
+//   "danger": ($danger, $danger-invert),
+//   // "twitter": ($twitter, $twitter-invert),
+//   "md-cobalt-80": ($md-cobalt-80, findColorInvert($md-cobalt-80)),
+//   "toolbox-dark-blue": ($toolbox-dark-blue, findColorInvert($toolbox-dark-blue)),
+//   "toolbox-light-blue": ($toolbox-light-blue, findColorInvert($toolbox-light-blue)),
+//   "md-gray-90": ($md-gray-90, findColorInvert($md-gray-90)),
+//   "md-gray-100": ($md-gray-100, findColorInvert($md-gray-100)),
+//   "md-green-50": ($md-green-50, findColorInvert($md-green-50))
+//   // "link-hover": ($link-hover, findColorInvert($link-hover)),
+//   // "button-hover-color": ($button-hover-color, findColorInvert($button-hover-color))
+// );
+
+
+// $addColors: (
+//   "twitter":($twitter, $twitter-invert),
+//   "linkedin": ($linkedin, $linkedin-invert),
+//   "github": ($github, $github-invert)
+// );
+// $colors: map-merge($colors, $addColors);
+
+
+
+
+// bulma shades
+// $shades: (
+//     "black-bis": $black-bis,
+//     "black-ter": $black-ter,
+//     "grey-darker": $grey-darker,
+//     "grey-dark": $grey-dark,
+//     "grey": $grey,
+//     "grey-light": $grey-light,
+//     "grey-lighter": $grey-lighter,
+//     "white-ter": $white-ter,
+//     "white-bis": $white-bis
+// );
+
+// change the background color of b-loading component
+// $loading-background: rgba(255,255,255,0.5);
+// $loading-background: rgba(255,255,255,1.0);
+// $loading-background: rgba(255,255,255,1.0);
+// $loading-background-legacy: #7f7f7f;
+
+// $link-invert: $primary-invert;
+// $link-focus-border: $primary;
+
+@import "~bulma/sass/utilities/derived-variables";
+// Links
+$link: $primary;
+// add colors like is-primary
+$addColors: (
+  "md-cobalt-80": ($md-cobalt-80, findColorInvert($md-cobalt-80)),
+  "toolbox-dark-blue": ($toolbox-dark-blue, findColorInvert($toolbox-dark-blue)),
+  "toolbox-light-blue": ($toolbox-light-blue, findColorInvert($toolbox-light-blue)),
+  "md-gray-90": ($md-gray-90, findColorInvert($md-gray-90)),
+  "md-gray-100": ($md-gray-100, findColorInvert($md-gray-100)),
+  "md-green-50": ($md-green-50, findColorInvert($md-green-50)),
+  "md-blue-pastel": (#C9F4FF, #00A0D1),
+  "md-blue": (#00A0D1, white)
+);
+$colors: map-merge($colors, $addColors);
+
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+
+// Cisco fonts from momentum-ui
+// @import "./fonts.scss";
+
+// momentum-ui icons
+// @import "./icons.scss";
+// @import "~@momentum-ui/icons/scss/momentum-ui-icons.scss"
+
+// reinforce buefy modal style over momentum p style
+.modal-card-title {
+  // color: #363636 !important;
+  flex-grow: 1 !important;
+  flex-shrink: 0 !important;
+  font-size: 1.5rem !important;
+  line-height: 1 !important;
+}
+
+// reinforce buefy modal style over momentum p style
+.dialog .modal-card .modal-card-head {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+}
+
+// remove drop-down arrow image from momentum
+.select select {
+  background-image: none !important;
+}
+
+// set b-tag font to regular instead of light
+span.tag {
+  font-family: "CiscoSansTT Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
