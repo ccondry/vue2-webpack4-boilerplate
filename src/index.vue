@@ -1,10 +1,10 @@
 <template>
   <div class="container is-fluid is-marginless app-content">
     <transition
-      mode="out-in"
-      enter-active-class="fadeIn"
-      leave-active-class="fadeOut"
-      appear
+    mode="out-in"
+    enter-active-class="fadeIn"
+    leave-active-class="fadeOut"
+    appear
     >
       <keep-alive>
         <router-view />

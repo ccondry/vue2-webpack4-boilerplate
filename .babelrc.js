@@ -7,7 +7,8 @@ module.exports = {
       {
         loose: true,
         shippedProposals: true,
-        modules: commonjs ? 'commonjs' : false,
+        // modules: commonjs ? 'commonjs' : false,
+        modules: 'amd',
         targets: {
           browsers: [
             '>0.25%',
@@ -36,15 +37,12 @@ module.exports = {
     [
       "module-resolver",
       {
-        "alias": {
-          "@momentum-ui/vue": "./src/lib"
-        }
       }
     ],
     ['@babel/plugin-proposal-class-properties', { loose: true }],
     '@babel/plugin-proposal-export-default-from',
     '@babel/plugin-proposal-export-namespace-from',
-    ['@babel/plugin-transform-runtime', { useESModules: !commonjs }],
+    ['@babel/plugin-transform-runtime', { useESModules: true }],
     'babel-plugin-dev-expression'
   ].filter(Boolean)
 };

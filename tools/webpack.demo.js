@@ -8,6 +8,7 @@ const TerserPlugin = require('terser-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const CircularDependencyPlugin = require('circular-dependency-plugin')
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const config = require('./config');
 
@@ -121,9 +122,33 @@ const webpackConfig = {
           preserveWhitespace: false
         }
       }
-    })
+    }),
+    // new BundleAnalyzerPlugin()
   ],
   optimization: {
+    splitChunks: {
+      chunks: 'async',
+      minSize: 20000,
+      // minRemainingSize: 0,
+      maxSize: 0,
+      minChunks: 1,
+      maxAsyncRequests: 30,
+      maxInitialRequests: 30,
+      automaticNameDelimiter: '~',
+      enforceSizeThreshold: 50000,
+      cacheGroups: {
+        defaultVendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true
+        }
+      }
+    },
+    usedExports: true,
     minimizer: [
       new TerserPlugin({
         terserOptions: {
@@ -140,9 +165,10 @@ const webpackConfig = {
           compress: true
         }
       })
-    ],
+    ]
   },
-  devtool: '#eval-source-map'
-};
+  // devtool: '#eval-source-map'
+  devtool: isProd ? 'source-map' : ''
+}
 
-module.exports = webpackConfig;
+module.exports = webpackConfig

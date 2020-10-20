@@ -1,33 +1,19 @@
 import Vue from 'vue'
-// import Momentum from '../index.js'
-// import Examples from '../examples.js'
-import App from './app/index.vue'
-import store from './app/store'
-import router from './app/router'
-// import { sync } from 'vuex-router-sync'
+import App from './index.vue'
+import store from './store'
+import router from './router'
 import VueRouter from 'vue-router'
+import './style.scss'
 
 // use 'buefy/src' when running from git,
+// import Buefy from 'buefy/src'
 // or use 'buefy' when running from npm
-import Buefy from 'buefy/src'
+import Buefy from 'buefy'
 
-// main and momentum style
-import './styles.scss'
-// custom and @media styles
-import './style.css'
-// load our modified Buefy styles
-import './buefy.scss'
-// add Buefy to Vue, and add momentum-ui icons to custom icon packs
-Vue.use(Buefy, {
-  customIconPacks: {
-    'md-icon': {
-      iconPrefix: 'icon icon-'
-    }
-  }
-})
+// add Buefy to Vue
+Vue.use(Buefy)
 
 Vue.use(VueRouter)
-// Vue.use(Momentum)
 
 new Vue({
   // el: '#app',
